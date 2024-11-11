@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'lagnos-webpage' title`, () => {
+  it(`should have the 'lagnos-application' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('lagnos-webpage');
+    expect(app.title).toEqual('lagnos-application');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, lagnos-webpage');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, lagnos-application');
   });
 });
