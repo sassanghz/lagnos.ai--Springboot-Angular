@@ -10,12 +10,19 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/users") // Base URL for all endpoints 
 public class UserController {
 
     @Autowired
     private UserRepository userRepository;
 
+    // Test endpoint to verify if the controller is working
+    @GetMapping("/test")
+    public String testEndpoint() {
+        return "UserController is working!";
+    }
+
+    // Login endpoint to handle user login
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
         String email = credentials.get("email");
